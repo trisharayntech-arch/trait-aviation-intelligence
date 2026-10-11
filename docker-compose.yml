@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  trait-aviation:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: trait_aviation_intelligence
+    ports:
+      - "8000:8000"
+    environment:
+      - PORT=8000
+    restart: unless-stopped
