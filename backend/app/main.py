@@ -15,6 +15,7 @@ from fastapi.responses import PlainTextResponse, JSONResponse
 
 
 from app.database import init_db, get_db_connection
+from app.live_flights import router as live_flights_router
 from app.seed_data import generate_synthetic_data
 from app.models import ChatRequest, ChatResponse, KPISummary
 from app.airport_ai.knowledge_engine import get_knowledge_engine
@@ -26,6 +27,7 @@ from app.aviation_analytics.passenger_baggage import get_passenger_baggage_analy
 from app.aviation_analytics.anomaly_detection import detect_operational_anomalies
 from app.aviation_analytics.forecasting import forecast_passenger_and_delays
 from app.aviation_analytics.reports import (
+
     generate_flights_csv, generate_baggage_csv, generate_executive_digest_markdown
 )
 
@@ -37,6 +39,8 @@ app = FastAPI(
     description="Integrated AirportAI Passenger Assistance & Aviation Operational Analytics Platform by TRAIT Innovation. Synthetic demonstration data only.",
     version="2.0.0"
 )
+
+app.include_router(live_flights_router)
 
 # CORS configuration for frontend
 app.add_middleware(
