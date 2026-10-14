@@ -41,7 +41,7 @@ export const AnomalyDetectionView: React.FC<AnomalyDetectionViewProps> = ({ data
 
         <div className="flex items-center space-x-4 text-xs font-mono">
           <div className="bg-[#0B132B] px-3 py-1.5 rounded-lg border border-slate-700">
-            <span className="text-slate-400">Total Flagged: </span>
+            <span className="text-slate-400">ML-Detected Anomalies: </span>
             <span className="font-bold text-amber-400">{data.total_anomalies_detected}</span>
           </div>
           <div className="bg-[#0B132B] px-3 py-1.5 rounded-lg border border-slate-700">
