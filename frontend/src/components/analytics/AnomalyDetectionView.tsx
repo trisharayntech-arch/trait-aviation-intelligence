@@ -45,7 +45,7 @@ export const AnomalyDetectionView: React.FC<AnomalyDetectionViewProps> = ({ data
             <span className="font-bold text-amber-400">{data.total_anomalies_detected}</span>
           </div>
           <div className="bg-[#0B132B] px-3 py-1.5 rounded-lg border border-slate-700">
-            <span className="text-slate-400">Active High-Severity: </span>
+            <span className="text-slate-400">Active ML Alerts: </span>
             <span className="font-bold text-rose-400">{data.active_anomalies_count}</span>
           </div>
         </div>
